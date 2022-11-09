@@ -1,6 +1,6 @@
 {
   "name": "@jb_scope1/common",
-  "version": "1.40.50",
+  "version": "1.40.51",
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {

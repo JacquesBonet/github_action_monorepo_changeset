@@ -7,7 +7,7 @@ permissions:
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   BRANCH: ${{ github.ref_name }}

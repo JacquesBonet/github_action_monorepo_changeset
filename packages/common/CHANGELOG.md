@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.40.51
+
+### Patch Changes
+
+- 03f7c06: feat(1): change IV
+
 ## 1.40.50
 
 ### Patch Changes

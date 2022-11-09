@@ -1,0 +1,50 @@
+name: CI Master
+
+permissions:
+  id-token: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  BRANCH: ${{ github.ref_name }}
+  ENV: "ci"
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  NODE_ENV: "development"
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  STAGE: "ci"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          scope: jb_scope1
+          registry-url: https://registry.npmjs.org
+
+      - name: Init npm & git
+        run: |
+          ./scripts/setup-private-npm.sh
+          git config --global user.email "jacques.bonet@gmail.com"
+          git config --global user.name "Jacques BONET"
+
+      - name: Install
+        run: |
+          yarn install
+
+      - name: Build
+        run: yarn build
+

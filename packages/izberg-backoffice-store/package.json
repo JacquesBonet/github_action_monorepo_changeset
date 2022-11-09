@@ -1,0 +1,19 @@
+{
+  "name": "@jb_scope1/izberg-backoffice-store",
+  "main": "src/index.js",
+  "version": "1.0.15",
+  "license": "UNLICENSED",
+  "keywords": [
+    "izberg",
+    "backoffices",
+    "store"
+  ],
+  "scripts": {
+    "test": "echo 'No tests'",
+    "test:coverage": "echo 'No test'"
+  },
+  "files": [
+    "src",
+    "CHANGELOG.md"
+  ]
+}

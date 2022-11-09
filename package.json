@@ -1,0 +1,39 @@
+{
+  "name": "@jb_scope1/izberg-backoffice-ui-7626",
+  "version": "1.1.5",
+  "description": "Izberg backoffice UI Kit",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/izberg-marketplace/izberg-backoffice-ui-7626/issues"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2"
+  },
+  "homepage": "https://github.com/izberg-marketplace/izberg-backoffice-ui-7626#readme",
+  "keywords": [
+    "izberg",
+    "backoffices",
+    "BOO",
+    "BOS"
+  ],
+  "license": "ISC",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izberg-marketplace/izberg-backoffice-ui-7626.git"
+  },
+  "scripts": {
+    "changeset": "changeset",
+    "build": "",
+    "build:ci": "",
+    "release": "yarn build && changeset publish",
+    "release:ci": "yarn build:ci && changeset publish --tag canary",
+    "setup-private-npm": "./scripts/setup-private-npm.sh",
+    "version-packages": "changeset version && yarn --mode=\"update-lockfile\""
+  },
+  "workspaces": [
+    "packages/*",
+    "backoffices/front"
+  ],
+  "packageManager": "yarn@3.2.4"
+}

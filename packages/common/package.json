@@ -1,0 +1,14 @@
+{
+  "name": "@jb_scope1/common",
+  "version": "1.40.49",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo 'No tests'"
+  },
+  "sideEffects": false,
+  "files": [
+    "src",
+    "CHANGELOG.md"
+  ]
+}

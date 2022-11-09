@@ -1,0 +1,15 @@
+version: 0.2
+env:
+    variables:
+        SLS_DEBUG: 'true'
+
+phases:
+    build:
+        commands:
+            - ./scripts/setup-private-npm.sh
+            - cd backoffices/server
+            - yarn install
+            - cd ../..
+            # mock dist folder generation for serverless-finch to work
+            - mkdir backoffices/front/dist
+            - ./scripts/backoffices/remove.sh

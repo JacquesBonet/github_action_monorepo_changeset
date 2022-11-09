@@ -15,6 +15,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/ci-setup
 
+      - name: Init npm & git
+        run: |
+          ./scripts/setup-private-npm.sh
+          git config --global user.email "jacques.bonet@gmail.com"
+          git config --global user.name "Jacques BONET"
+
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
         with:

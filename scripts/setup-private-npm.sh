@@ -9,3 +9,6 @@ echo "@jb_scope1:registry=http://registry.npmjs.org/" >> ~/.npmrc
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
 
 cat ~/.npmrc
+
+git config --global user.email "jacques.bonet@gmail.com"
+git config --global user.name "Jacques BONET"

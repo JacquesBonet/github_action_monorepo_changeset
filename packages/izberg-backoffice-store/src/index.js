@@ -1,5 +1,5 @@
 const fct2 = () => {
-    return 'fct2+3'
+    return 'fct2+4'
 }
 
 export {
